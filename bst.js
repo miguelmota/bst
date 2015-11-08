@@ -11,11 +11,11 @@
 
   BST.prototype.push = function(value) {
     if (!this.root) {
-      this.root = new BST._Node(value);
+      this.root = new BST.Node(value);
     }
 
     var currentNode = this.root;
-    var newNode = new BST._Node(value);
+    var newNode = new BST.Node(value);
 
     while(currentNode) {
       if (value < currentNode.value) {
@@ -53,9 +53,9 @@
     }
   };
 
-  BST._Node = function _Node(value) {
-    if (!(this instanceof _Node)) {
-      return new _Node(value);
+  BST.Node = function Node(value) {
+    if (!(this instanceof Node)) {
+      return new Node(value);
     }
 
     this.value = value;
